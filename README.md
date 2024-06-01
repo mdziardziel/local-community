@@ -4,6 +4,7 @@ This app is designed to streamline the management of your local community. Wheth
 ## Features
 
 Admin panel:
+- authentication
 - documents generator
 - bulletin
 - council voting
@@ -25,15 +26,31 @@ This approach is a compromise between monolith and microservices and tries to ke
 
 ### Color palette
 
-$\colorbox{#8ECAE6}{8ECAE6}$ 
-$\colorbox{#219EBC}{219EBC}$ 
-$\colorbox{#023047}{023047}$ 
-$\colorbox{#FFB703}{FFB703}$ 
-$\colorbox{#FB8500}{FB8500}$ 
+$\color{#8ECAE6}{8ECAE6}$ 
+$\color{#219EBC}{219EBC}$ 
+$\color{#023047}{023047}$ 
+$\color{#FFB703}{FFB703}$ 
+$\color{#FB8500}{FB8500}$ 
 
 ### Components
 
 ![components](https://github.com/mdziardziel/local-community/blob/main/designs/components.png?raw=true)
+
+### authentication
+
+Helps in authentication of admin users. Registration is not allowed.
+
+#### ERD
+
+![authentication erd](https://github.com/mdziardziel/local-community/blob/main/diagrams/authentication_erd.png?raw=true)
+
+#### Designs
+
+![login](https://github.com/mdziardziel/local-community/blob/main/designs/auth/login.png?raw=true)
+![login failed](https://github.com/mdziardziel/local-community/blob/main/designs/auth/login_failed.png?raw=true)
+![reset password](https://github.com/mdziardziel/local-community/blob/main/designs/auth/reset_password.png?raw=true)
+![change password](https://github.com/mdziardziel/local-community/blob/main/designs/auth/change_password.png?raw=true)
+
 
 ### documents generator
 
