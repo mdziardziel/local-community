@@ -1,4 +1,6 @@
-# Local community
+
+
+# Local community :construction: WIP :construction:
 This app is designed to streamline the management of your local community. Whether you're overseeing a village district, a neighborhood association, or a small town, our app helps you organize events, manage resources, communicate with residents, and more. Simplify your administrative tasks and enhance community engagement with our user-friendly interface and powerful features.
 
 ## Features
