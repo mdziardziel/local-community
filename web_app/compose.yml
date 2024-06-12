@@ -4,19 +4,16 @@ services:
       context: .
       dockerfile: Dockerfile.dev
     ports:
-      - "3000:3000"
+      - 3000:3000
     expose:
       - 8080
     depends_on:
       - db
-      - redis
     volumes:
-      - .:/local_community
+      - web_app_local_files:/web_app
     container_name: local-community
-  redis:
-    image: "redis:alpine"
   db:
-    image: "postgres:alpine"
+    image: postgres:alpine
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
@@ -24,3 +21,9 @@ services:
       - postgres_data:/var/lib/postgresql/data
 volumes:
   postgres_data:
+  web_app_local_files:
+    driver: local
+    driver_opts:
+      type: none
+      device: ./
+      o: bind
