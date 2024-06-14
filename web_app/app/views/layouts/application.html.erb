@@ -11,12 +11,28 @@
   </head>
 
   <body>
-    <% flash.each do |type, msg| %>
-      <div>
-        <%= msg %>
-      </div>
-    <% end %>
-
-    <%= yield %>
+    <header>
+      <div class="logo">LocalCommunity</div>
+      <nav>
+          <ul>
+              <li><a href="#">Documents</a></li>
+              <li><a href="#">Bulletin</a></li>
+              <li><a href="#">Voting</a></li>
+              <li><a href="#">Members</a></li>
+              <li><a href="#">CMS</a></li>
+          </ul>
+      </nav>
+      <div class="logout"><a href="#">Logout</a></div>
+    </header>
+    <div class="flash-container">
+      <% flash.each do |type, msg| %>
+        <div class="flash-message show <%= type %>">
+          <%= msg %>
+        </div>
+      <% end %>
+    </div>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>
