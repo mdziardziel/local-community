@@ -8,16 +8,16 @@ class Authentication::UsersController < Authentication::ApplicationController
 
     if @user.update(user_params)
       flash[:notice] = "User updated successfully"
-      redirect_to users_path
+      redirect_to authentication_user_path(@user.id), status: :ok
     else
       flash[:alert] = "User not updated"
-      render :new, status: :unprocessable_entity
+      render :edit, status: :unprocessable_entity
     end
   end
 
   private
 
   def user_params
-    params.require(:user).permit(:password, :password_confirmation)
+    params.require(:authentication_user).permit(:password, :password_confirmation)
   end
 end
