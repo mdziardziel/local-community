@@ -1,0 +1,7 @@
+<%= form_with model: @user, builder: CustomFormBuilder, url: authentication_user_sessions_path  do |f| %>
+  <%= f.text_field_with_validation :email %>
+  <%= f.password_field_with_validation :password %>
+  <p>
+    <%= f.submit "Login" %>
+  </p>
+<% end %>
