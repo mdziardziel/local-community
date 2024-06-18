@@ -11,6 +11,33 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div class="logo">LocalCommunity</div>
+      <% if current_user %>
+        <nav>
+            <ul>
+                <li><a href="#">Documents</a></li>
+                <li><a href="#">Bulletin</a></li>
+                <li><a href="#">Voting</a></li>
+                <li><a href="#">Members</a></li>
+                <li><a href="#">CMS</a></li>
+                <li><%= link_to "Account", authentication_user_edit_path %></li>
+            </ul>
+        </nav>
+        <div class="session"><%= button_to "Logout", authentication_user_sessions_path, method: :delete %></div>
+      <% else %>
+        <div class="session"><%= link_to "Login", new_authentication_user_session_path %></div>
+      <% end %>
+    </header>
+    <div class="flash-container">
+      <% flash.each do |type, msg| %>
+        <div class="flash-message show <%= type %>">
+          <%= msg %>
+        </div>
+      <% end %>
+    </div>
+    <main>
+      <%= yield %>
+    </main>
   </body>
 </html>

@@ -1,0 +1,8 @@
+<%= form_with model: @user_form, scope: :authentication_user, builder: CustomFormBuilder, url: authentication_user_path do |f| %>
+  <%= f.password_field_with_validation :current_password %>
+  <%= f.password_field_with_validation :new_password %>
+  <%= f.password_field_with_validation :new_password_confirmation %>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
