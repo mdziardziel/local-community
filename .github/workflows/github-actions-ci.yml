@@ -1,5 +1,7 @@
 name: CI
 
+on: [push]
+
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -37,5 +39,5 @@ jobs:
         run: docker build -t --build-arg BUILDTIME_RAILS_ENV=test local-community-web -f Dockerfile.dev ./web_app
 
       - name: Run tests
-        run: docker run --rm --network host -e RAILS_ENV=test -e DB_HOST=localhost local-community-web bin/rails test
+        run: docker run --rm --network host -e RAILS_ENV=test -e DB_HOST local-community-web bin/rails test
 
