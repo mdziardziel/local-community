@@ -1,0 +1,33 @@
+/* Flash message container */
+.flash-message {
+  background-color: transparent;
+  font-size: 18px;
+  text-align: center;
+  justify-content: space-between;
+  padding: 15px 0px 5px 0px;
+  margin: 10px 40px;
+}
+
+.flash-container {
+  min-height: 70px;
+}
+
+.flash-message.notice {
+  color: #8ECAE6;
+  border-bottom: 2px solid #8ECAE6;
+}
+
+.flash-message.alert {
+  color: #FB8500;
+  border-bottom: 2px solid #FB8500;
+}
+
+.flash-message.show {
+  animation: fadeInOut 5s forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10%, 90% { opacity: 1; }
+  100% { opacity: 0; }
+}
