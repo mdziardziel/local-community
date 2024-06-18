@@ -7,8 +7,9 @@ FROM registry.docker.com/library/ruby:$RUBY_VERSION-slim as base
 # Rails app lives here
 WORKDIR /web_app
 
-# Set production environment
-ENV RAILS_ENV="development"
+# Set development environment
+ARG BUILDTIME_RAILS_ENV="development"
+ENV RAILS_ENV=$BUILDTIME_RAILS_ENV
 
 # Install packages needed to build gems
 RUN apt-get update -qq && \
