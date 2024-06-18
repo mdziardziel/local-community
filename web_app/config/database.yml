@@ -4,7 +4,7 @@ default: &default
   username: postgres
   password: postgres
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: db
+  host: <%= ENV.fetch("DB_HOST") { "db" } %>
 
 development:
   primary:
