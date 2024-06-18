@@ -1,0 +1,49 @@
+/* Item list container */
+.item-list {
+  width: 100%;
+  max-width: 600px; /* Adjust the width as necessary */
+  padding: 0 20px; /* Optional: padding to give some space on the sides */
+}
+
+/* Individual item styling */
+.item {
+  display: flex;
+  justify-content: center; /* Center the content */
+  margin: 10px 0;
+  align-self: flex-end;
+}
+
+/* Label and value styling */
+.label {
+  margin-right: 15px;
+  text-align: right; /* Align text to the right */
+  flex: 0 0 auto; /* Prevent flex shrinking or growing */
+  font-size: 12px;
+  align-self: flex-end;
+  padding: 5px 0px;
+}
+
+.value {
+  text-align: left; /* Align text to the left */
+  flex: 0 0 auto; /* Prevent flex shrinking or growing */
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px 0px;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  .item {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .label, .value {
+      font-size: 16px;
+  }
+
+  .label {
+      margin-right: 0;
+      text-align: left;
+  }
+}
