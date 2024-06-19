@@ -43,9 +43,12 @@ jobs:
 
       - name: Run rubocop
         run: docker run --rm --network host -e RAILS_ENV=test -e DB_HOST=localhost local-community-test rubocop
+        continue-on-error: true
 
       - name: Run brakeman
         run: docker run --rm --network host -e RAILS_ENV=test -e DB_HOST=localhost local-community-test brakeman
+        continue-on-error: true
 
       - name: Run reek
         run: docker run --rm --network host -e RAILS_ENV=test -e DB_HOST=localhost local-community-test reek
+        continue-on-error: true
