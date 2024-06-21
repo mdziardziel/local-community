@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  uuid: 82aab198-03ec-49af-a659-bcbc8c1c9f2c
+  template_name: MyString
+  content: ""
+  community_id: 1
+  
+two:
+  id: 2
+  uuid: fc7a199e-c5f7-4c9c-941c-a3376d615111
+  template_name: MyString2
+  content: ""
+  community_id: 2
